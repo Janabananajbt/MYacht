@@ -715,6 +715,15 @@ img.img-fluid:hover {
     width: 5%;
 }
 
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 /* Luxury Text Styling */
 .container.text-center h2 {
@@ -755,7 +764,11 @@ h3.text-center {
 }
 
 .text-center {
-margin-top: 10px;
+margin-top: 12px;
+}
+
+.carousel-title {
+    margin-top: 30px !important; 
 }
 .list-unstyled {
     font-size: 1.3rem; /* Increased font size for better readability */
@@ -1212,7 +1225,7 @@ margin-top: 10px;
 
 
     .carousel-title {
-        margin-top: 60px;
+        margin-top: 40px;
         margin-left: 12px;
         margin-right: 12px;
         font-size: 2rem;
