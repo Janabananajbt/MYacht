@@ -129,17 +129,30 @@ header {
     overflow: hidden; /* Sprečava horizontalni scroll */
 }
 
-.hero-image2 video {
-    width: 100%; /* Smanjuje širinu */
-    max-width: 1600px; /* Ograničava maksimalnu širinu */
-    max-height: 65vh;
-    height: 70vh; /* Podesi visinu po želji */
-    object-fit: cover; /* Održava proporcije i ispunjava okvir */
-    object-position: right center; /* Fokusira donji desni ugao */
-    display: block; /* Centriranje */
-    margin: 0 auto; /* Centriranje */
+.hero-image2 {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden; 
+    height: 700px;
+    max-height: 70vh;
 }
 
+.hero-image2 img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+    display: block;
+}
+
+.hero-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    opacity: 0.9;
+}
 .yacht-list i:hover {
     color: #566aa6;
 }
@@ -162,9 +175,9 @@ header {
 .hero-logo {
     position: absolute;
     bottom: 2%; 
-    right: 4%; 
+    right: 2%; 
     height: auto;
-    max-width: 150px !important; 
+    max-width: 120px !important; 
     opacity: 0.8; 
 }
 
@@ -775,9 +788,10 @@ h3.text-center {
     letter-spacing: 0.5px;
 }
 
-.text-center {
-margin-top: 12px;
+header .container.text-center a img.logo {
+    margin-top: 10px;
 }
+
 
 .carousel-title {
     margin-top: 50px !important; 
@@ -1076,10 +1090,7 @@ margin-top: 12px;
         font-size: 14px;
     }
 
-    .div.col-md-6 {
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
     
     
       /* Tablet: 2 slike po redu */
@@ -1188,8 +1199,8 @@ margin-top: 12px;
         padding: 10px;;
     }
 
-    .hero-image2 video {
-        max-height: 48vh;
+    .hero-image2 img {
+        max-height: 450px;
     }
 }
 
@@ -1312,13 +1323,23 @@ margin-top: 12px;
         display: none; /* Sakriva samo prvu sliku (The Porto Montenegro.png) */
     }
 
+    .hero-image2 {
+        width: 100%;
+        height: 50vh; 
+        background-image: url('images/The Porto Montenegro.png'); 
+        background-size: cover;
+        background-position: left center; 
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
  
     .hero-logo {
         position: absolute;
         bottom: 1%; 
         right: 4%; 
         height: auto;
-        max-width: 140px !important; 
+        max-width: 100px !important; 
     }
 
     .image-item img {
