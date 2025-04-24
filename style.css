@@ -794,7 +794,7 @@ header .container.text-center a img.logo {
 
 
 .carousel-title {
-    margin-top: 50px !important; 
+    margin-top: 37px !important; 
 }
 .list-unstyled {
     font-size: 1.3rem; /* Increased font size for better readability */
@@ -892,7 +892,7 @@ header .container.text-center a img.logo {
 }
 
 .gallery-section {
-    padding-bottom: 90px;
+    padding-bottom: 20px;
     padding-top: 20px;
     width: 100%;
     max-width: 1350px;
@@ -1090,6 +1090,95 @@ header .container.text-center a img.logo {
         font-size: 14px;
     }
 
+    .about-us-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .about-us-section h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #1b1b1b;
+      }
+      
+      .about-us-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+      
+      .about-us-section img {
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      
+      .about-us-section img:hover {
+        transform: scale(1.02);
+      }
+      .about-us-section {
+        margin-top: 80px; /* ili više/niže, po želji */
+    }
+
+    .boat-description {
+        padding: 40px 20px;
+    }
+    
+    .boat-description h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .pricing-info {
+        font-size: 1rem;
+        color: #555;
+    }
+    
+    .pricing-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .pricing-list li {
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+    
+    .pricing-list .price {
+        font-weight: 500;
+        color: #333;
+    }
+    
+    .boat-location {
+        font-style: italic;
+        color: #777;
+    }
+    
+    
+      
+      @media (max-width: 768px) {
+        .about-us-section {
+          padding: 3rem 1rem;
+        }
+
+      
+      
+        .about-us-section h2 {
+          font-size: 2rem;
+        }
+      
+        .about-us-section p {
+          font-size: 1rem;
+        }
+      }
+      
+
     
     
     
@@ -1144,6 +1233,15 @@ header .container.text-center a img.logo {
       }
 
 @media (max-width: 767px) {
+
+    .boat-description h2 {
+        padding-top: 15px;
+    }
+
+    .boat-description {
+
+        padding: 10px 20px;
+    }
 
     .container.carousel-img {
         padding: 0; 
@@ -1301,12 +1399,28 @@ header .container.text-center a img.logo {
         text-align: center; /* Centriranje stavki u listama */
     }
 }
+@media (max-width: 899px) {
+    .about-us-section .row {
+        flex-direction: column; /* Slika ide ispod teksta */
+    }
 
+    .about-us-section .col-md-6:first-child {
+        order: 1; /* Slika ide ispod teksta */
+    }
+
+    .about-us-section .col-md-6:last-child {
+        order: 0; /* Tekst ide prvo */
+    }
+}
 /* Responsive Design */
 @media (max-width: 991px) {
     .navbar {
         background-color: #ffffff8d !important;
         width: 100%;
+    }
+    .about-us-section {
+        margin-top: 0px; /* ili više/niže, po želji */
+     
     }
 
     .hero-image {
