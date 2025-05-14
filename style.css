@@ -1044,7 +1044,51 @@ header .container.text-center a img.logo {
         opacity: 0.9;
       }
       
-      
+      /* Stilizacija navigacije */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Jezička dugmadi na desnoj strani */
+.language-switcher {
+    margin-right: auto;
+    display: flex;
+}
+
+.language-switcher a {
+    display: inline-block;
+    padding: 5px 10px;  /* Manji padding */
+    margin: 0 5px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;  /* Manja veličina fonta */
+    transition: all 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.language-switcher a:active {
+    background-color: #555;
+    border-color: #555;
+}
+
       
 
     h2 {
