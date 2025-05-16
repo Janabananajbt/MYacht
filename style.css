@@ -25,6 +25,41 @@ header {
     height: auto;
 }
 
+.contact-icons a {
+    text-decoration: none !important;  /* Force remove underline */
+    outline: none !important;
+    border: none;
+    background: none;
+    line-height: 1;
+    display: inline-block;
+}
+
+.contact-icons a:focus,
+.contact-icons a:hover {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.contact-icons i {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Your preferred sizes and colors */
+.contact-icons .fa-viber {
+    font-size: 27px;
+    color: #665cac;
+}
+
+.contact-icons .fa-whatsapp {
+    font-size: 29.5px;
+    color: #25D366;
+}
+
+
 /* Navigation */
 .navbar {
     background-color: transparent;
