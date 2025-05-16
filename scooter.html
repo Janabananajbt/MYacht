@@ -277,17 +277,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    // Inicijalizuj EmailJS sa tvojim User ID
-    emailjs.init("2Tij-3BlODT0eU_jM"); // Zameni sa svojim User ID-jem sa EmailJS-a
+ <script>
+    
+    emailjs.init("-8F_lyevXP09VhkDJ");
 
     // Kada se forma pošalje
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Spreči osvežavanje stranice
+        event.preventDefault(); 
 
         // Pošaljemo podatke na EmailJS
-        emailjs.send("service_kslta1h", "template_2ea8mx2", {
+        emailjs.send("service_cje2a0v", "template_az0legw", {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
             message: document.getElementById("message").value
