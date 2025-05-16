@@ -231,32 +231,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- Убедись, что эта строка подключена в <head> или перед </body> -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script>
-    // Inicijalizuj EmailJS sa tvojim User ID
-    emailjs.init("2Tij-3BlODT0eU_jM"); // Zameni sa svojim User ID-jem sa EmailJS-a
+    // Инициализация EmailJS с вашим публичным ключом
+    emailjs.init("-8F_lyevXP09VhkDJ");
 
-    // Kada se forma pošalje
+    // При отправке формы
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Spreči osvežavanje stranice
+        event.preventDefault(); // Предотвращает перезагрузку страницы
 
-        // Pošaljemo podatke na EmailJS
-        emailjs.send("service_kslta1h", "template_2ea8mx2", {
+        // Отправляем данные через EmailJS
+        emailjs.send("service_cje2a0v", "template_az0legw", {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
             message: document.getElementById("message").value
         }).then(function(response) {
-            // Ako je e-mail uspešno poslat
-            document.getElementById("status").innerText = "Message sent successfully!";
+            // Если сообщение успешно отправлено
+            document.getElementById("status").innerText = "Сообщение успешно отправлено!";
             document.getElementById("status").style.color = "green";
-            document.getElementById("contact-form").reset(); // Resetuje formu
+            document.getElementById("contact-form").reset(); // Очистить форму
         }, function(error) {
-            // Ako je slanje e-maila failed
-            document.getElementById("status").innerText = "Failed to send message.";
+            // Если произошла ошибка при отправке
+            document.getElementById("status").innerText = "Не удалось отправить сообщение.";
             document.getElementById("status").style.color = "red";
-            console.log(error);  // Dodaj ovo da vidiš tačnu grešku u konzoli
+            console.log(error); // Вывод ошибки в консоль
         });
     });
 </script>
+
 
 
 </body>
