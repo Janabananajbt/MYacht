@@ -1264,14 +1264,27 @@ nav ul li {
       /* Tablet: 2 slike po redu */
       @media (max-width: 992px) {
 
-        
-.contact-content {
+            .language-switcher {
+        justify-content: center; /* centriraj horizontalno */
+        width: 100%;             /* da zauzme celu širinu */
+        margin-bottom: 10px;        /* malo prostora odozgo ako treba */
+    }
+
+    .language-switcher a {
+    color: #000; /* JASNA crna boja da se vidi na beloj pozadini */
+    text-decoration: none;
+    border: 1px solid #41436385;
+    padding: 4px 6px;
+}
+
+
+    .contact-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 500px; /* Maximalna širina za sadržaj, možeš prilagoditi prema potrebi */
     margin: 0 auto; /* Centriranje sadržaja na ekranu */
-}
+    }
         .image-item {
           flex: 1 1 calc(50% - 15px);
           max-width: calc(50% - 15px);
@@ -1312,6 +1325,9 @@ nav ul li {
       }
 
 @media (max-width: 767px) {
+
+    
+
 
     .boat-description h2 {
         padding-top: 15px;
